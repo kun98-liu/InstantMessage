@@ -84,7 +84,7 @@ func (server *Server) Handler(conn net.Conn) {
 		case <-isLive:
 			//重置定时器
 			//不做任何事，就是为了激活select
-		case <-time.After(time.Second * 10):
+		case <-time.After(time.Second * 30):
 			//chaoshi
 			user.SendMsg("待机时间过长\n")
 
